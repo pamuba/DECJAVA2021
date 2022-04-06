@@ -41,3 +41,13 @@ let lizard = {
 //we can borrow the sing fn for the lizard object using bind
 // const singLizard = dragon.sing.bind(lizard)
 // console.log(singLizard())
+
+//lizard should inherit all the prps and methods from dragon
+//prototype = fn obs
+//__proto__ = obs
+
+lizard.__proto__ = dragon
+console.log(lizard.sing())
+//wht abt the fire prop
+console.log(lizard.fire)
+console.log(lizard.fight())
