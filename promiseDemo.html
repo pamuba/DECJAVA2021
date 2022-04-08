@@ -11,7 +11,7 @@
         const promise = new Promise((resolve, reject)=>{
             //XMLHttpRequest is a Browser implementaion
             const request = new XMLHttpRequest();
-            request.open('GET', "https://jsonplaceholder.typicode.com/user");
+            request.open('GET', "https://jsonplaceholder.typicode.com/users");
             request.onload =  () => {
                 if(request.status === 200){
                     resolve(request.response)
