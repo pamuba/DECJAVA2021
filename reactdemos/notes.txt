@@ -1,0 +1,19 @@
+porps
+1. immutable
+2. passed into components
+3. props in class comps this.props
+4. props in function coms props
+
+state
+1. are mutable
+2. maintained within the class component
+3. function comps can have state using hooks(useState)
+
+
+Conditional Rendering
+1. if/else
+2. Element Variables
+3. Trenary operator
+4. Short circuit operator
+
+Controlled Components
