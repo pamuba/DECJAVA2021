@@ -17,3 +17,23 @@ Conditional Rendering
 4. Short circuit operator
 
 Controlled Components
+
+Reg Comp has no implementation of shouldCpomponentUpdate.
+shouldCpomponentUpdate returns true by default
+
+
+Pure Comp has implementation of shouldCpomponentUpdate.
+shouldCpomponentUpdate returns the result of shallow comparision of props and state
+
+
+SC:
+Primitive Types:
+a SC b (value )
+
+Reference Types:
+a SC b (value + address)
+
+
+Error Boundary
+static getDerivedStateFromError(error) -> fallback UI
+componentDidCatch(error, info) -> logging error info

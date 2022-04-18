@@ -7,6 +7,11 @@ import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import Controlled from './components/Controlled';
+import PureComp from './components/PureComp';
+import ParentComp from './components/ParentComp';
+import Refsdemo from './components/Refsdemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
@@ -26,7 +31,18 @@ function App() {
         {/* <EventBind/> */}
         {/* <ParentComponent /> */}
         {/* <UserGreeting /> */}
-        <Controlled/>
+        {/* <Controlled/> */}
+        {/* <ParentComp/> */}
+        {/* <Refsdemo/> */}
+        <ErrorBoundary>
+          <Hero heroName = "Batman"/>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName = "Superman"/>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName = "Joker"/>
+        </ErrorBoundary>
       </header>
     </div>
   );
