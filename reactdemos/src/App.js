@@ -12,6 +12,12 @@ import ParentComp from './components/ParentComp';
 import Refsdemo from './components/Refsdemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext'
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
 
 function App() {
   return (
@@ -34,7 +40,7 @@ function App() {
         {/* <Controlled/> */}
         {/* <ParentComp/> */}
         {/* <Refsdemo/> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName = "Batman"/>
         </ErrorBoundary>
         <ErrorBoundary>
@@ -42,7 +48,16 @@ function App() {
         </ErrorBoundary>
         <ErrorBoundary>
           <Hero heroName = "Joker"/>
-        </ErrorBoundary>
+        </ErrorBoundary> */}
+
+        {/* <ClickCounter/>
+        <HoverCounter/> */}
+        {/* <UserProvider value="John">
+         <ComponentC />
+        </UserProvider> */}
+
+        {/* <PostList/> */}
+        <PostForm />
       </header>
     </div>
   );
