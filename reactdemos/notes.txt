@@ -48,3 +48,9 @@ Context API, Redux, Flux
 2. Provide Context value
 3. Consume the context value
 
+useEffect: lets u peform sideeffects in a functional component + 
+replace 3 lifecycle hooks 
+1.componentDidMount
+2.componentDidUpdate
+3.componentWillUnmount
+

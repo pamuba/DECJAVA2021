@@ -17,7 +17,13 @@ import HoverCounter from './components/HoverCounter';
 import ComponentC from './components/ComponentC';
 import { UserProvider } from './components/userContext'
 import PostList from './components/PostList';
-import PostForm from './components/PostForm';
+import HookCounter from './components/HookCounter';
+import HookCounterTwo from './components/HookCounterTwo';
+import HookCounterThree from './components/HookCounterThree';
+import HookCounterFour from './components/HookCounterFour';
+import HookMouse from './components/HookMouse';
+import MouseContainer from './components/MouseContainer';
+// import PostForm from './components/PostForm';
 
 function App() {
   return (
@@ -57,7 +63,15 @@ function App() {
         </UserProvider> */}
 
         {/* <PostList/> */}
-        <PostForm />
+        {/* <PostForm /> */}
+
+        {/* <HookCounter/> */}
+        {/* <HookCounterTwo/> */}
+
+        {/* <HookCounterThree/> */}
+        {/* <HookCounterFour/> */}
+        {/* <HookMouse/> */}
+        <MouseContainer/>
       </header>
     </div>
   );
