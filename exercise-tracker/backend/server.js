@@ -26,6 +26,7 @@ const usersRouter = require('./routes/users')
 
 //localhost:5000/exercises
 app.use('/exercises', exercisesRouter)
+//localhost:5000/users
 app.use('/users', usersRouter)
 
 //start the server

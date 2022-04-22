@@ -1,0 +1,11 @@
+##GET
+POST http://localhost:5000/users/add
+Content-type:"application/json"
+
+{
+    "username":"John"
+}
+
+###
+
+GET http://localhost:5000/users/
