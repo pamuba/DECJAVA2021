@@ -71,7 +71,7 @@ export default class CreateExercises extends Component {
     axios.post('http://localhost:5000/exercises/add', exercise)
          .then(res=>console.log(res.data))
 
-    //window.location = '/'
+    window.location = '/'
   }
   render() {
     return (
@@ -117,9 +117,9 @@ export default class CreateExercises extends Component {
           <label>Date: </label>
           <div>
           <DatePicker
-                            selected={this.state.date}
-                            onChange={this.onChangeDate}
-                            />
+              selected={this.state.date}
+              onChange={this.onChangeDate}
+              />
           </div>
           </div>
 
