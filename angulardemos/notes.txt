@@ -6,6 +6,8 @@ ng serve
 ng generate component test
 ng g c test
 
+
+////////////////////////////////////////////////
 npm install @angular/cli@9.1.15
 Angular9
 ng new angulardemos9
