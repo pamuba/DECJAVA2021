@@ -1,0 +1,21 @@
+npm install -g @angular/cli
+Angular 13
+
+ng new angulardemos13
+ng serve
+ng generate component test
+ng g c test
+
+npm install @angular/cli@9.1.15
+Angular9
+ng new angulardemos9
+
+4 files
+ts
+spec
+html
+css
+
+Modules:is a feature implementation of ur project
+-> components, services, pipes, directives, etc
+-> as a container 
