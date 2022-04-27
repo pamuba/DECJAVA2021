@@ -7,6 +7,32 @@ ng generate component test
 ng g c test
 
 
+*interpolation - one way data binding
+*property binding
+*class binding
+*style binding
+*two way data binding
+
+*structural directives
+ngIf
+ngSwitch
+ngFor
+pipes
+Component Interaction
+DI
+Services
+HTTP + Observables
+Routing
+template Forms
+
+MEAN
+
+Attributes:html
+Initializes DOM properties
+Attributes are Immutable
+
+property values are mutable
+
 ////////////////////////////////////////////////
 npm install @angular/cli@9.1.15
 Angular9
