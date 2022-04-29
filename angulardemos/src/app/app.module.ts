@@ -11,7 +11,11 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TemplatereferenceComponent } from './templatereference/templatereference.component';
 import { FormsModule } from '@angular/forms';
 import { StructuraldirectivesComponent } from './structuraldirectives/structuraldirectives.component';
-
+import { NgforComponent } from './ngfor/ngfor.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +25,18 @@ import { StructuraldirectivesComponent } from './structuraldirectives/structural
     StylebindingComponent,
     EventbindingComponent,
     TemplatereferenceComponent,
-    StructuraldirectivesComponent
+    StructuraldirectivesComponent,
+    NgforComponent,
+    EmployeeDetailComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
