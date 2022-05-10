@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from '../video';
+import { VideoService } from '../video.service';
 
 @Component({
   selector: 'app-video-center',
@@ -8,13 +9,23 @@ import { Video } from '../video';
 })
 export class VideoCenterComponent implements OnInit {
 
-  public videos: Video[] = [
-    {"_id":"1", "title":"title1", "url":"url1", "description":"description1"},
-    {"_id":"2", "title":"title2", "url":"url2", "description":"description2"}
-  ]
-  constructor() { }
+  selectedVideo: any;
+
+  public videos: Video[] = []
+  constructor(private _videoService:VideoService) { }
 
   ngOnInit(): void {
+    this._videoService.getVideos()
+    .subscribe(resVideoData => {
+      for(const d of (resVideoData as any)){
+        this.videos.push(d)
+      }
+    })
+  }
+
+  onSelectVideo(video:Video){
+    this.selectedVideo = video;
+    console.log(this.selectedVideo)
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Video } from '../video';
 
 @Component({
@@ -8,9 +8,19 @@ import { Video } from '../video';
 })
 export class VideoDetailComponent implements OnInit {
 
+  @Input() video: any
+  editTitle:boolean = false
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(){
+    this.editTitle = false;
+  }
+
+  onTitleClick(){
+    this.editTitle = true;
   }
 
 }
