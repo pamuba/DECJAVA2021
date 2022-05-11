@@ -10,6 +10,7 @@ import { VideoService } from '../video.service';
 export class VideoCenterComponent implements OnInit {
 
   selectedVideo: any;
+  public hidenewVideo:boolean = true
 
   public videos: Video[] = []
   constructor(private _videoService:VideoService) { }
@@ -25,7 +26,44 @@ export class VideoCenterComponent implements OnInit {
 
   onSelectVideo(video:Video){
     this.selectedVideo = video;
+    this.hidenewVideo = true;
     console.log(this.selectedVideo)
+  }
+
+  onSubmitAddVideo(video:Video){
+    this._videoService.addVideo(video)
+        .subscribe(resNewVideo => {
+          this.videos.push(resNewVideo)
+          this.hidenewVideo = true;
+          this.selectedVideo = resNewVideo
+        })
+  }
+  onUpdateVideoEvent(video:Video){
+    this._videoService.updateVideo(video)
+        .subscribe(resUpdatedVideo => video = resUpdatedVideo)
+
+    this.selectedVideo = null;
+  }
+
+  onDeleteVideoEvent(video:Video){
+    //1. delete from database
+    //2. delete from the videos array
+
+    let videoArray = this.videos;
+
+    this._videoService.deleteVideo(video)
+        .subscribe(resDeletedVideo => {
+          for(let i=0; i<videoArray.length; i++){
+            if(videoArray[i]._id === video._id){
+              videoArray.splice(i,1);
+            }
+          }
+        });
+        this.selectedVideo = null;
+  }
+
+  newVideo(){
+    this.hidenewVideo = false
   }
 
 }
